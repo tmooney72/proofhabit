@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import habitRoutes from './routes/habits.routes';
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ app.use(express.json());
 app.get('/', (req: Request, res: Response) => {
   res.send('ProofHabit API is running with TypeScript');
 });
+app.use('/api/habits', habitRoutes);
 
 const PORT = process.env.PORT || 3000;
 
