@@ -7,9 +7,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  habits    Habit[]
+  createdAt DateTime @default(now())
+}
+
 model Habit {
   id        Int      @id @default(autoincrement())
   title     String
   frequency String
   createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
 }

@@ -2,18 +2,21 @@ import {Request, Response} from 'express';
 import prisma from '../lib/prisma';
 
 let habits: any[] = [];
+let userId: string | null = null;
 
 export const createHabit = async (req: Request, res: Response) => {
     const {title, frequency} = req.body;
+    const user = req.user;
 
-    if (!title || !frequency) {
-        return res.status(400).json({message: 'Title and frequency are required.'});
+    if (!title || !frequency || !user?.uid) {
+        return res.status(400).json({message: 'Missing required fields'});
     }
     try {
     const newHabit = await prisma.habit.create({
         data: {
         title,
         frequency,
+        userId: user.uid
         }
     });
 
@@ -25,8 +28,14 @@ export const createHabit = async (req: Request, res: Response) => {
 };
 
 export const getHabits = async (req: Request, res: Response) => {
+    const user = req.user;
+    if (!user?.uid) {
+        return res.status(400).json({message: 'Unauthorized'});
+    }
     try {
-    const habits = await prisma.habit.findMany();
+    const habits = await prisma.habit.findMany({
+        where: { userId: user.uid}
+    });
     res.status(200).json(habits);
 
     } catch (error) {
