@@ -36,7 +36,7 @@ ProofHabit is a cross-platform productivity app that helps users build lasting h
 
 ## 🚀 Getting Started
 
-### Clone the Repo
+## Clone the Repo
 
 ```bash
 git clone https://github.com/your-username/proofhabit.git
@@ -62,21 +62,10 @@ PORT=3000
 DATABASE_URL=your_postgres_url
 OPENAI_API_KEY=sk-xxxx
 <br/>
-🧪 Roadmap
- Setup habit tracking & user auth
 
- Add AI-generated nudges
-
- Group system with check-in proof posts
-
- Push notifications & reminders
-
- Public group discovery
-
- Offline support
 
 <br/>
-📂 Folder Structure
+## 📂 Folder Structure 
 bash
 Copy
 Edit
@@ -91,13 +80,13 @@ proofhabit/
 ├── README.md
 ├── server.js
 <br/>
-🧑‍💻 Contributing
+##🧑‍💻 Contributing
 Pull requests and issues are welcome! Please open a discussion or issue first before making big changes.
 
-📄 License
+##📄 License
 This project is licensed under the MIT License. See LICENSE for details.
 
-💬 Contact
+##💬 Contact
 Created by Tyler Mooney
 Open to collaboration, feedback, or just geeking out 🤝
 
@@ -115,7 +104,7 @@ Let me know if you'd like:
 I'm happy to make that too.
 
 
-✅ Project Checklist (ProofHabit)
+##✅ Project Checklist (ProofHabit)
 Track your progress step by step as you build out the app.
 
 <details> <summary>🧱 Phase 1: Core Setup</summary>
