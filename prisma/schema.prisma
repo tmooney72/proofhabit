@@ -8,10 +8,13 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  habits    Habit[]
-  createdAt DateTime @default(now())
+  id          String        @id @default(uuid())
+  email       String        @unique
+  habits      Habit[]
+  createdAt   DateTime      @default(now())
+  Group       Group[]
+  GroupMember GroupMember[]
+  Proof       Proof[]
 }
 
 model Habit {
@@ -21,4 +24,37 @@ model Habit {
   createdAt DateTime @default(now())
   userId    String
   user      User     @relation(fields: [userId], references: [id])
+}
+
+model Group {
+  id        Int           @id @default(autoincrement())
+  name      String
+  createdAt DateTime      @default(now())
+  ownerId   String
+  owner     User          @relation(fields: [ownerId], references: [id])
+  members   GroupMember[]
+  Proof     Proof[]
+}
+
+model GroupMember {
+  id      Int    @id @default(autoincrement())
+  userId  String
+  groupId Int
+  user    User   @relation(fields: [userId], references: [id])
+  group   Group  @relation(fields: [groupId], references: [id])
+
+  @@unique([userId, groupId]) // Prevent duplicate memberships
+}
+
+model Proof {
+  id        Int      @id @default(autoincrement())
+  message   String
+  imageUrl  String? // optional if just text proof
+  createdAt DateTime @default(now())
+
+  userId  String
+  groupId Int
+
+  user  User  @relation(fields: [userId], references: [id])
+  group Group @relation(fields: [groupId], references: [id])
 }
