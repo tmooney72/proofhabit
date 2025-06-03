@@ -34,37 +34,8 @@ ProofHabit is a cross-platform productivity app that helps users build lasting h
 
 <br/>
 
-## 🚀 Getting Started
-
-## Clone the Repo
-
-```bash
-git clone https://github.com/your-username/proofhabit.git
-cd proofhabit
-
-Install Dependencies
-bash
-Copy
-Edit
-npm install
-Run the Backend Server
-bash
-Copy
-Edit
-npm run dev
-Configure your environment variables in a .env file.
-
-Example .env
-ini
-Copy
-Edit
-PORT=3000
-DATABASE_URL=your_postgres_url
-OPENAI_API_KEY=sk-xxxx
-<br/>
 
 
-<br/>
 ## 📂 Folder Structure 
 bash
 Copy
@@ -79,48 +50,38 @@ proofhabit/
 ├── .gitignore
 ├── README.md
 ├── server.js
+
 <br/>
-##🧑‍💻 Contributing
-Pull requests and issues are welcome! Please open a discussion or issue first before making big changes.
 
-##📄 License
+
+
+## 📄 License
 This project is licensed under the MIT License. See LICENSE for details.
+<br/>
 
-##💬 Contact
+## 💬 Contact
 Created by Tyler Mooney
 Open to collaboration, feedback, or just geeking out 🤝
 
-yaml
-Copy
-Edit
+<br/>
 
----
-
-Let me know if you'd like:
-- A version that includes both frontend + backend folders
-- Tailored branding/colors or images
-- A starter Express + Postgres backend to match this
-
-I'm happy to make that too.
-
-
-##✅ Project Checklist (ProofHabit)
+## ✅ Project Checklist (ProofHabit)
 Track your progress step by step as you build out the app.
 
-<details> <summary>🧱 Phase 1: Core Setup</summary>
- Initialize project with TypeScript + Express.js
+- <details> <summary>🧱 Phase 1: Core Setup</summary>
+ Initialize project with TypeScript + Express.js ✅ 
 
- Set up .env, .gitignore, and project structure
+ Set up .env, .gitignore, and project structure ✅ 
 
- Install Prisma and connect to PostgreSQL
+ Install Prisma and connect to PostgreSQL ✅ 
 
- Define and push Habit model
+ Define and push Habit model ✅ 
 
- Create /api/habits routes (GET, POST)
+ Create /api/habits routes (GET, POST) ✅ 
 
- Test with Postman
+ Test with Postman ✅ 
 
-</details> <details> <summary>🔐 Phase 2: User Authentication</summary>
+- </details> <details> <summary>🔐 Phase 2: User Authentication</summary>
  Add Firebase Auth or JWT-based login system
 
  Create User model in Prisma
@@ -131,7 +92,7 @@ Track your progress step by step as you build out the app.
 
  Return only habits owned by logged-in user
 
-</details> <details> <summary>👥 Phase 3: Group System</summary>
+- </details> <details> <summary>👥 Phase 3: Group System</summary>
  Define Group model
 
  Create GroupMember join model
@@ -142,7 +103,7 @@ Track your progress step by step as you build out the app.
 
  Allow each group to be tied to a shared habit
 
-</details> <details> <summary>📸 Phase 4: Proof Posting</summary>
+- </details> <details> <summary>📸 Phase 4: Proof Posting</summary>
  Create ProofPost model
 
  Set up file/image uploads (Cloudinary or Firebase Storage)
@@ -151,7 +112,7 @@ Track your progress step by step as you build out the app.
 
  Route to view group proof feed
 
-</details> <details> <summary>📊 Phase 5: Behavioral Insights & AI Nudges</summary>
+- </details> <details> <summary>📊 Phase 5: Behavioral Insights & AI Nudges</summary>
  Analyze habit logs for behavior patterns
 
  Integrate OpenAI API to generate nudges
@@ -160,7 +121,7 @@ Track your progress step by step as you build out the app.
 
  Show insights like “Best Time of Day” for each habit
 
-</details> <details> <summary>🎨 Phase 6: Frontend Integration</summary>
+- </details> <details> <summary>🎨 Phase 6: Frontend Integration</summary>
  Create mobile app with React Native or Expo
 
  (Optional) Create web dashboard with React.js
@@ -171,7 +132,7 @@ Track your progress step by step as you build out the app.
 
  Add auth to UI and persist sessions
 
-</details> <details> <summary>🚀 Phase 7: Polish and Launch</summary>
+- </details> <details> <summary>🚀 Phase 7: Polish and Launch</summary>
  Improve error handling and validation
 
  Add streak tracking and gamification (badges, XP)
